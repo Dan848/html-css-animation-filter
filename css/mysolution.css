@@ -39,7 +39,6 @@
 }
 
 .ex-7-img:hover{
-
     filter: grayscale(1) contrast(2);
 }
 
@@ -63,5 +62,77 @@
 
 @keyframes loading {
     0% {transform: rotate(0deg)}
-    100% { transform: rotate(360deg)}
+    100% {transform: rotate(360deg)}
+}
+
+.ex-11-icon:hover{
+    animation-name: notloading;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes notloading {
+    0% {transform: rotate(0deg)}
+    90% {transform: rotate(270deg)}
+    100% {transform: rotate(0deg)}
+}
+
+/* EX-12 */
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: top-button-right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; /* È più carino così dai*/
+    animation-timing-function: linear;
+}
+
+@keyframes top-button-right {
+    0% {left: 10%;}
+    50% {left: calc(100% - 60px);}
+    100% {left: 10%;}
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation-name: bot-button-right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
+
+@keyframes bot-button-right {
+    0% {right: 20%;}
+    50% {right: calc(100% - 60px);}
+    100% {right: 20%;}
+}
+
+
+/* EX-13 */
+.ex-13-button:hover .ex-13-top-white{
+    animation-name: top-button-around;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes top-button-around {
+    0% {top: -10px; left: 10%;}
+    30% {top: -10px; left: calc(100% - 30px);}
+    45% {top: calc(100% - 10px); left: calc(100% - 30px);}
+    80% {top: calc(100% - 10px); left: -30px;}
+    90% {top: -10px; left: -30px;}
+    100% {top: -10px; left: 10%;}
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation-name: bot-button-around;
+    animation-duration: 2s; 
+    animation-timing-function: linear;
+}
+
+@keyframes bot-button-around {
+    0% {bottom: -10px; right: 20%;}
+    30% {bottom: -10px; right: calc(100% - 30px);}
+    45% {bottom: calc(100% - 10px); right: calc(100% - 30px);}
+    80% {bottom: calc(100% - 10px); right: -30px;}
+    90% {bottom: -10px; right: -30px;}
+    100% {bottom: -10px; right: 20%;}
 }
